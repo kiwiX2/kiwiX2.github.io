@@ -4,6 +4,9 @@
 	--ash-gray: #b2beb5;
 	--asparagus: #87a96b;
 	--diamond-size: 11vh;
+	--orange: rgb(255, 165, 0);
+	--dark-orange: rgb(255, 132, 38);
+	--diamond-size: 13vh;
 }
 
 * {
@@ -53,7 +56,7 @@ body {
 	position: absolute;
 	left: 8vw;
 	align-items: end;
-	width: 250px;
+	width: 12vw;
 	height: 90vh;
 }
 
@@ -61,9 +64,9 @@ body {
 	opacity: 0;
 	transition: opacity 0.5s;
 	font-size: 50px;
-	padding: 1vh 1vh 1vh 10vh;
+	padding: 1vh 1vh 1vh 7vh;
 	height: 8vh;
-	width: 250px;
+	width: 12vw;
 	text-align: end;
 	background-color: var(--ash-gray);
 }
