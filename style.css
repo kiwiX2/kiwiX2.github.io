@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap');
 
 :root {
-	--orange: rgb(255, 165, 0);
-	--dark-orange: rgb(255, 132, 38);
+	--orange: #b2beb5;
+	--dark-orange: #87a96b;
 	--diamond-size: 13vh;
 }
 
