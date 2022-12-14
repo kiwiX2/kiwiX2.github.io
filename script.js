@@ -7,7 +7,7 @@ function diamondOvr(){
 	}
 	diamonds[a].style.opacity = 1;
 	links[a].style.opacity = 0.8;
-	document.getElementById('links').style.width = "40vh";
+	document.getElementById('links').style.width = "320px";
 }
 
 function diamondOut(){
@@ -15,5 +15,5 @@ function diamondOut(){
 		diamonds[i].style.opacity = 1;
 	}
 	links[a].style.opacity = 0;
-	document.getElementById('links').style.width = "10vh";
+	document.getElementById('links').style.width = "250px";
 }
