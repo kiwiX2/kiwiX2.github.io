@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap');
+
+:root {
+	--orange: rgb(255, 165, 0);
+	--dark-orange: rgb(255, 132, 38);
+	--diamond-size: 13vh;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	
+	color: black;
+	text-decoration: none;
+	font-family: 'Courier Prime', sans-serif;
+}
+
+body {
+	background-color: black;
+}
+
+#links, #container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+
+#container {
+	width: 18vh;
+	height: 90vh;
+	margin: 5vh;
+	align-items: center;
+}
+
+.diamond {
+	transition: opacity 0.2s, background-color 0.2s, transform 0.2s;
+	transform: rotate(45deg);
+	height: var(--diamond-size);
+	width: var(--diamond-size);
+	border: 1vh solid black;
+	background-color: var(--orange);
+}
+
+.diamond:hover {
+	transform: scale(1.2) rotate(45deg);
+	background-color: var(--dark-orange);
+}
+
+#links {
+	z-index: -1;
+	transition: opacity 0.2s, width 0.2s;
+	position: fixed;
+	align-items: end;
+	top: 5vh;
+	width: 10vh;
+	height: 90vh;
+	margin-left: 15vh;
+}
+
+.link {
+	opacity: 0;
+	transition: opacity 0.2s;
+	font-size: 50px;
+	padding: 1vh 1vh 1vh 10vh;
+	height: 8vh;
+	background-color: var(--orange);
+}
