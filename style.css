@@ -52,7 +52,6 @@ body {
 	transition: width 0.2s;
 	position: absolute;
 	left: 8vw;
-	align-items: end;
 	width: 250px;
 	height: 90vh;
 }
@@ -60,13 +59,11 @@ body {
 .link {
 	opacity: 0;
 	position: relative;
-	left: 0px;
-	width: 250px;
-	transition: opacity 0.5s;
+	left: 50px;
+	width: 0px;
+	transition: opacity 0.5s, width 0.3s;
 	font-size: 50px;
-	padding: 1vh;
-	padding-left: 90px;
-	height: 8vh;
 	text-align: end;
+	padding: 20px;
 	background-color: var(--ash-gray);
 }

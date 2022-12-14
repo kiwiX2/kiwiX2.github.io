@@ -1,17 +1,23 @@
-diamonds = document.getElementsByClassName('diamond');
+diamonds = document.querySelectorAll('.diamond');
 links = document.getElementsByClassName('link');
 
-function diamondOvr(){
-	for(i = 0; i < diamonds.length; i++){
-		diamonds[i].style.opacity = 0.5;
-	}
-	diamonds[a].style.opacity = 1;
-	links[a].style.opacity = 0.7;
-}
-
-function diamondOut(){
-	for(i = 0; i < diamonds.length; i++){
-		diamonds[i].style.opacity = 1;
-	}
-	links[a].style.opacity = 0;
-}
+diamonds.forEach((diamond, index) =>  {
+    diamond.addEventListener('mouseover', () => {
+        links[index].style.width = '100%';
+		for(i = 0; i < diamonds.length; i++){
+			diamonds[i].style.opacity = '0.5';
+		}
+		diamonds[index].style.opacity = '1';
+		links[index].style.opacity = '0.7'
+		links[index].style.padding = '20px'
+    });
+	diamond.addEventListener('mouseout', () => {
+		for(i = 0; i < diamonds.length; i++){
+			diamonds[i].style.opacity = '1';
+		}
+		links[index].style.width = '0px';
+		links[index].style.opacity = '0';
+		//sleep function
+		links[index].style.padding = '20px 0px';
+	});
+});
