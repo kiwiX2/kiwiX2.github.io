@@ -11,7 +11,7 @@ diamonds.forEach((diamond, index) =>  {
 		links[index].style.opacity = '0.7';
     });
 	diamond.addEventListener('active', () => {
-		diamond.dispatchEvent('mouseover');
+		diamond.dispatchEvent(new event('mouseover'));
 	});
 	diamond.addEventListener('mouseout', () => {
 		for(i = 0; i < diamonds.length; i++){
