@@ -10,15 +10,11 @@ diamonds.forEach((diamond, index) =>  {
 		diamonds[index].style.opacity = '1';
 		links[index].style.opacity = '0.7';
     });
-	diamond.addEventListener('active', () => {
-		diamond.dispatchEvent(new event('mouseover'));
-	});
 	diamond.addEventListener('mouseout', () => {
 		for(i = 0; i < diamonds.length; i++){
 			diamonds[i].style.opacity = '1';
 		}
 		links[index].style.width = '0px';
 		links[index].style.opacity = '0';
-		//sleep function
 	});
 });
