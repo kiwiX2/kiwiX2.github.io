@@ -9,7 +9,6 @@ diamonds.forEach((diamond, index) =>  {
 		}
 		diamonds[index].style.opacity = '1';
 		links[index].style.opacity = '0.7'
-		links[index].style.padding = '20px'
     });
 	diamond.addEventListener('mouseout', () => {
 		for(i = 0; i < diamonds.length; i++){
@@ -18,6 +17,5 @@ diamonds.forEach((diamond, index) =>  {
 		links[index].style.width = '0px';
 		links[index].style.opacity = '0';
 		//sleep function
-		links[index].style.padding = '20px 0px';
 	});
 });
