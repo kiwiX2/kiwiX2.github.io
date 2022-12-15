@@ -68,3 +68,19 @@ body {
 	padding: 5%;
 	background-color: var(--ash-gray);
 }
+
+.side-img {
+	z-index: -2;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	aspect-ratio: 607.5/1080;
+	height: 100vh;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+
+.rockyridge-svg {
+	background-image: url('images/rockyridge.svg');
+}
