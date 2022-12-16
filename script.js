@@ -1,5 +1,5 @@
 diamonds = document.querySelectorAll('.diamond');
-textArea = document.getElementsByClassName('phone-link');
+textArea = document.getElementsByClassName('text-slider');
 runs = 0;
 linkArray = ["https://kiwix2.github.io", "gallery.html", "https://kiwix2.github.io"]
 

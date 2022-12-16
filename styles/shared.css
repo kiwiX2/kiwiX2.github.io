@@ -3,7 +3,7 @@
 :root {
 	--ash-gray: #b2beb5;
 	--asparagus: #87a96b;
-	--diamond-size: max(30px, 6vw);
+	--diamond-size: max(40px, 6vw);
 }
 
 * {
