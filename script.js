@@ -1,17 +1,5 @@
 diamonds = document.querySelectorAll('.diamond');
-links = document.getElementsByClassName('phone-link');
-
-mediaQuery = window.matchMedia('(hover: none)');
-console.log(mediaQuery);
-if (mediaQuery.matches) {
-  	for(i = 0; i < links.length; i++){
-		diamonds[i].setAttribute('disabled', 'disabled');
-	};
-} else {
-	for(i = 0; i < links.length; i++){
-		links[i].setAttribute('disabled', 'disabled');
-	}
-}
+links = document.getElementsByClassName('link');
 
 diamonds.forEach((diamond, index) =>  {
     diamond.addEventListener('mouseover', () => {
