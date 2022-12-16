@@ -94,10 +94,3 @@ body {
 		font-size: 2em;
 	}
 }
-
-@media (hover: none) {
-	.diamond {
-		pointer-events: none;
-		cursor: default;
-	}
-}
