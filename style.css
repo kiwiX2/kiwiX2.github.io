@@ -20,7 +20,7 @@ body {
 	background-color: black;
 }
 
-#link-container, #container {
+#slide-out, #container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -47,7 +47,7 @@ body {
 	background-color: var(--asparagus);
 }
 
-#link-container {
+#slide-out {
 	z-index: -1;
 	transition: width 0.2s;
 	position: absolute;
@@ -58,7 +58,7 @@ body {
 	height: 90vh;
 }
 
-.link {
+.phone-link {
 	opacity: 0;
 	position: relative;
 	overflow: hidden;
@@ -90,7 +90,7 @@ body {
 	.side-img{
 		transform: scaleX(0.5) translateX(50%);
 	}
-	.link {
+	.phone-link {
 		font-size: 2em;
 	}
 }
