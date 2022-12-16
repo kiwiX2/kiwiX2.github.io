@@ -87,11 +87,18 @@ body {
 	background-image: url('images/rockyridge.svg');
 }
 
-@media (hover: none) {
+@media only screen and (max-width: 600px) {
 	.side-img{
 		transform: scaleX(0.5) translateX(50%);
 	}
 	.link {
 		font-size: 2em;
+	}
+}
+
+@media (hover: none) {
+	.diamond {
+		pointer-events: none;
+		cursor: default;
 	}
 }
