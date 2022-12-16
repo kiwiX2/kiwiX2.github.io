@@ -53,7 +53,8 @@ body {
 	position: absolute;
 	left: 8%;
 	left: min(100px);
-	width: 300px;
+	width: 15vw;
+	min-width: 250px;
 	height: 90vh;
 }
 
@@ -63,9 +64,9 @@ body {
 	overflow: hidden;
 	width: 0px;
 	transition: opacity 0.3s, width 0.3s;
-	font-size: 50px;
+	font-size: 3em;
 	text-align: end;
-	padding: 5%;
+	padding: 8%;
 	background-color: var(--ash-gray);
 }
 
@@ -83,4 +84,20 @@ body {
 
 .rockyridge-svg {
 	background-image: url('images/rockyridge.svg');
+}
+
+@media only screen and (max-width: 600px) {
+	.side-img{
+		transform: scaleX(0.5) translateX(50%);
+	}
+	.link {
+		font-size: 2em;
+	}
+}
+
+@media (hover: none) {
+	.diamond {
+		pointer-events: none;
+		cursor: default;
+	}
 }

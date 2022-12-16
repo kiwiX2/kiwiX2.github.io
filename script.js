@@ -14,7 +14,7 @@ diamonds.forEach((diamond, index) =>  {
 		for(i = 0; i < diamonds.length; i++){
 			diamonds[i].style.opacity = '1';
 		}
-		links[index].style.width = '0px';
+		links[index].style.width = '0%';
 		links[index].style.opacity = '0';
 	});
 });
