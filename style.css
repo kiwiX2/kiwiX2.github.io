@@ -62,7 +62,7 @@ body {
 	opacity: 0;
 	position: relative;
 	overflow: hidden;
-	width: 0px;
+	width: 0%;
 	transition: opacity 0.3s, width 0.3s;
 	font-size: 3em;
 	text-align: end;
