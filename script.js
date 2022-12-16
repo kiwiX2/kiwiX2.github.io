@@ -40,8 +40,8 @@ diamonds.forEach((diamond, index) =>  {
 	});
 });
 
-textArea.forEach((textArea, index) => {
-	textArea.addEventListener('ontouchstart', () => {
+textArea.forEach((text, index) => {
+	text.addEventListener('ontouchstart', () => {
 		hoverChanges(index);
 	})
 });
