@@ -1,40 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap');
-
-:root {
-	--ash-gray: #b2beb5;
-	--asparagus: #87a96b;
-	--diamond-size: 11vh;
-}
-
-* {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-	
-	color: black;
-	text-decoration: none;
-	font-family: 'Courier Prime', sans-serif;
-}
-
-body {
-	background-color: black;
-}
-
 #slide-out, #container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	height: 70vh;
 }
 
 #container {
-	width: 18vh;
-	height: 90vh;
-	margin: 5vh;
+	width: 13vw;
+	margin: 15vh 2vh;
 	align-items: center;
 }
 
 .diamond {
-	transition: opacity 0.2s, background-color 0.2s, transform 0.2s;
+	transition: opacity 0.2s, background-color 0.2s, transform cubic-bezier(.5, 0, 0.6, 2) 0.2s;
 	transform: rotate(45deg);
 	height: var(--diamond-size);
 	width: var(--diamond-size);
@@ -49,13 +27,9 @@ body {
 
 #slide-out {
 	z-index: -1;
-	transition: width 0.2s;
 	position: absolute;
-	left: 8%;
-	left: min(100px);
-	width: 16vw;
-	min-width: 250px;
-	height: 90vh;
+	left: max(50px, 10vw);
+	width: max(200px, 20vw);
 }
 
 .phone-link {
@@ -83,7 +57,7 @@ body {
 }
 
 .rockyridge-svg {
-	background-image: url('images/rockyridge.svg');
+	background-image: url('../images/rockyridge.svg');
 }
 
 @media only screen and (max-width: 600px) {
