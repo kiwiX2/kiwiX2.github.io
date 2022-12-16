@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital@1&display=swap');
 
 :root {
+	/* Define variables for colors and sizes */
 	--ash-gray: #b2beb5;
 	--asparagus: #87a96b;
 	--diamond-size: 11vh;
@@ -20,7 +21,7 @@ body {
 	background-color: black;
 }
 
-#link-container, #container {
+#slide-out, #container {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -47,18 +48,18 @@ body {
 	background-color: var(--asparagus);
 }
 
-#link-container {
+#slide-out {
 	z-index: -1;
 	transition: width 0.2s;
 	position: absolute;
 	left: 8%;
 	left: min(100px);
-	width: 15vw;
+	width: 16vw;
 	min-width: 250px;
 	height: 90vh;
 }
 
-.link {
+.phone-link {
 	opacity: 0;
 	position: relative;
 	overflow: hidden;
@@ -87,10 +88,6 @@ body {
 }
 
 @media (hover: none) {
-	.diamond {
-		pointer-events: none;
-		cursor: default;
-	}
 	.side-img{
 		transform: scaleX(0.5) translateX(50%);
 	}
