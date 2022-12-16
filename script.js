@@ -1,5 +1,19 @@
+function isPhone() {
+	if(screen.width	<= 600) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 diamonds = document.querySelectorAll('.diamond');
 links = document.getElementsByClassName('phone-link');
+
+if (isPhone()) {
+	for(i = 0; i < diamonds.length; i++) {
+		diamonds[i].removeAttribute('href');
+	}
+}
 
 diamonds.forEach((diamond, index) =>  {
     diamond.addEventListener('mouseover', () => {
