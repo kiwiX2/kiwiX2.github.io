@@ -1,3 +1,9 @@
+:root {
+	--diamond-size: max(40px, 6vw);
+}
+
+
+/*-------------------- MENU ICONS --------------------*/
 #slide-out, #container {
 	display: flex;
 	flex-direction: column;
@@ -22,7 +28,6 @@
 
 .diamond:hover {
 	transform: scale(1.2) rotate(45deg);
-	background-color: var(--asparagus);
 }
 
 #slide-out {
@@ -44,6 +49,8 @@
 	background-color: var(--ash-gray);
 }
 
+
+/*-------------------- SIDE IMAGE --------------------*/
 .side-img {
 	z-index: -2;
 	position: absolute;
@@ -60,6 +67,8 @@
 	background-image: url('../images/rockyridge.svg');
 }
 
+
+/*-------------------- PHONE CHANGES --------------------*/
 @media only screen and (max-width: 600px) {
 	.side-img{
 		transform: scaleX(0.5) translateX(50%);

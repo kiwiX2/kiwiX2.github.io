@@ -1,3 +1,4 @@
+/*-------------------- GRID DECLARATIONS --------------------*/
 .grid-container {
 	overflow: hidden;
 	display: grid;
@@ -16,6 +17,8 @@
     transition: transform cubic-bezier(.09, .07, .44, 1) 2s;
 }
 
+
+/*-------------------- GRID ELEMENTS --------------------*/
 #one {
 	grid-area: 1 / 1 / span 2 / span 4;
 	background-image: url('../images/dove.png');
