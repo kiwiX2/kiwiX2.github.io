@@ -1,4 +1,5 @@
 .grid-container {
+	overflow: hidden;
 	display: grid;
 	grid-template: repeat(10, 1fr) / repeat(16, 1fr);
 	gap: 2vw;
@@ -7,6 +8,7 @@
 }
 
 .grid-item {
+	transform: translateY(300%);
 	aspect-ratio: 2848/4288;
 	background-size: cover;
     background-position: center;
@@ -15,25 +17,25 @@
 
 #one {
 	grid-area: 1 / 1 / span 2 / span 4;
-	background-image: url('../images/dove.jpg');
+	background-image: url('../images/dove.png');
 }
 
 #two {
 	grid-area: 5 / 3 / span 2 / span 3;
-	background-image: url('../images/duck.jpg');
+	background-image: url('../images/duck.png');
 }
 
 #three {
 	grid-area: 3 / 13 / span 2 / span 4;
-	background-image: url('../images/whiteDove.jpg');
+	background-image: url('../images/whiteDove.png');
 }
 
 #four {
 	grid-area: 2 / 12 / span 2 / span 2;
-	background-image: url('../images/duck2.jpg');
+	background-image: url('../images/duck2.png');
 }
 
 #five {
 	grid-area: 2 / 7 / span 2 / span 4;
-	background-image: url('../images/train.jpg');
+	background-image: url('../images/train.png');
 }
