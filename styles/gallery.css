@@ -9,10 +9,11 @@
 
 .grid-item {
 	transform: translateY(300%);
-	aspect-ratio: 2848/4288;
+	aspect-ratio: 1080/1626;
 	background-size: cover;
     background-position: center;
     border-radius: 50px;
+    transition: transform cubic-bezier(.09, .07, .44, 1) 2s;
 }
 
 #one {
