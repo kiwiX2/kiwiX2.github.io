@@ -1,3 +1,8 @@
+body {
+	overflow: hidden;
+}
+
+
 /*-------------------- GRID DECLARATIONS --------------------*/
 .grid-container {
 	overflow: hidden;
@@ -14,7 +19,11 @@
 	background-size: cover;
     background-position: center;
     border-radius: 50px;
-    transition: transform cubic-bezier(.09, .07, .44, 1) 2s;
+    transition: box-shadow ease-in-out 0.5s, transform cubic-bezier(.09, .07, .44, 1) 2s;
+}
+
+.grid-item:hover {
+	box-shadow: 10px 10px 10px black;
 }
 
 
