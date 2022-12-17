@@ -1,0 +1,39 @@
+.grid-container {
+	display: grid;
+	grid-template: repeat(10, 1fr) / repeat(16, 1fr);
+	gap: 2vw;
+	height: 100vh;
+	width: 100vw;
+}
+
+.grid-item {
+	aspect-ratio: 2848/4288;
+	background-size: cover;
+    background-position: center;
+    border-radius: 50px;
+}
+
+#one {
+	grid-area: 1 / 1 / span 2 / span 4;
+	background-image: url('../images/dove.jpg');
+}
+
+#two {
+	grid-area: 5 / 3 / span 2 / span 3;
+	background-image: url('../images/duck.jpg');
+}
+
+#three {
+	grid-area: 3 / 13 / span 2 / span 4;
+	background-image: url('../images/whiteDove.jpg');
+}
+
+#four {
+	grid-area: 2 / 12 / span 2 / span 2;
+	background-image: url('../images/duck2.jpg');
+}
+
+#five {
+	grid-area: 2 / 7 / span 2 / span 4;
+	background-image: url('../images/train.jpg');
+}
