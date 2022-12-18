@@ -1,7 +1,7 @@
 diamonds = document.querySelectorAll('.diamond');
 textArea = document.querySelectorAll('.text-slider');
 runs = 0;
-linkArray = ["https://kiwix2.github.io", "gallery.html", "https://kiwix2.github.io"]
+linkArray = ["gallery.html", "gallery.html", "gallery.html"]
 
 
 function hoverChanges(index) {

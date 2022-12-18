@@ -49,6 +49,10 @@ body {
 	padding: 15px 13px 15% 13px;
 }
 
+a:hover + i {
+	scale: 1.1;
+}
+
 #one {
 	grid-area: 1 / 1 / span 2 / span 5;
 	background-image: url('../images/dove.png');
