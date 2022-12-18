@@ -1,4 +1,5 @@
 gridItems = document.querySelectorAll('.grid-item');
+scrollI = document.getElementById('scroll-I');
 scrollButton = document.getElementById('scroll-button');
 homeButton = document.getElementById('home-button');
 
@@ -20,10 +21,10 @@ function autoScroll() {
 /*-------------------- MANUAL SCROLL --------------------*/
 scrollValue = 300;
 window.addEventListener('wheel', (event) => {
-	if (event.deltaY > 0) {
-		hideButton();
-	}else if(event.deltaY < 0 && scrollValue <= 350) {
-		showButton();
+	if(event.deltaY < 0 && scrollValue <= 350) {
+		reverseAnimateButton();
+	} else if(event.deltaY > 0 && scrollValue >= 450) {
+		animateButton();
 	}
 	scrollValue = Math.max(300, Math.min(480, scrollValue + event.deltaY / 2));
 	gridItems.forEach((item) => {
@@ -34,7 +35,7 @@ window.addEventListener('wheel', (event) => {
 
 /*-------------------- BUTTON SCROLL & TOGGLE --------------------*/
 scrollButton.addEventListener('click', buttonScroll);
-scrollButton.addEventListener('click', hideButton);
+scrollButton.addEventListener('click', scrollButtonAnimate);
 
 function buttonScroll() {
 	gridItems.forEach((item) => {
@@ -43,14 +44,38 @@ function buttonScroll() {
 	})
 }
 
-function hideButton() {
-	scrollButton.style.opacity = '0';
-	setTimeout(function() {
-    	scrollButton.style.visibility = 'hidden';
-	}, 500);
+function reverseButtonScroll() {
+	gridItems.forEach((item) => {
+		item.style.transform = 'translateY(0%)';
+		scrollValue = 300;
+	})
 }
 
-function showButton() {
-	scrollButton.style.visibility = 'visible';
-	scrollButton.style.opacity = '1';
+function scrollButtonAnimate() {
+	if (scrollI.style.rotate == '' || scrollI.style.rotate == '0deg') {
+		animateButton();
+	} else {
+		reverseButtonScroll();
+		reverseAnimateButton();
+	}
+}
+
+function animateButton() {
+	scrollI.style.opacity = '0';
+	scrollButton.style.transform = 'scaleX(0.5) translateY(-82vh)';
+	setTimeout(function() {
+		scrollButton.style.transform = 'scaleX(1) translateY(-82vh)';
+		scrollI.style.opacity = '1';
+		scrollI.style.rotate = '180deg';
+	}, 200);
+} 
+
+function reverseAnimateButton() {
+	scrollI.style.opacity = '0';
+	scrollButton.style.transform = 'scaleX(0.5) translateY(0%)';
+	setTimeout(function() {
+		scrollButton.style.transform = 'scaleX(1) translateY(0%)';
+		scrollI.style.opacity = '1';
+		scrollI.style.rotate = '0deg';
+	}, 200);
 }

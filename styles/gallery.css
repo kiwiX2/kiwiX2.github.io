@@ -3,7 +3,7 @@ body {
 }
 
 
-/*-------------------- GRID DECLARATIONS --------------------*/
+/*-------------------- GRID BOILERPLATE --------------------*/
 .grid-container {
 	overflow: hidden;
 	display: grid;
@@ -16,18 +16,20 @@ body {
 .grid-item {
 	transform: translateY(300%);
 	aspect-ratio: 1080/1626;
-	background-size: cover;
+	background-size: 100%;
     background-position: center;
     border-radius: 50px;
-    transition: box-shadow ease-in-out 0.3s, transform cubic-bezier(.09, .07, .44, 1) 2s;
+    transition: box-shadow ease-in-out 0.3s, background-size ease-in-out 0.3s, transform cubic-bezier(.09, .07, .44, 1) 2s;
 }
 
-.grid-item:hover {
-	box-shadow: 10px 10px 10px black;
-}
 
 
 /*-------------------- GRID ELEMENTS --------------------*/
+.grid-item:hover {
+	background-size: 105%;
+	box-shadow: 5px 5px 20px black;
+}
+
 #home-button, #scroll-button {
 	z-index: 1;
 	opacity: 0;
@@ -35,23 +37,25 @@ body {
 	top: 50%;
 	border-radius: 50%;
 	background-color: hotpink;
-	font-size: 30px;
-	transition: opacity linear 0.5s;
+	font-size: 25px;
+	transition: opacity linear 0.5s, transform cubic-bezier(.09, .07, .44, 1) 0.5s;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 #home-button {
 	grid-area: 1 / 20;
-	padding: 11px;
 }
 
 #scroll-button {
 	cursor: pointer;
 	grid-area: 9 / 10;
-	padding: 15px 13px 15% 13px;
+	
 }
 
 i {
-	transition: scale linear 0.2s;
+	transition: all ease-in-out 0.2s;
 }
 
 a:hover i, #scroll-button:hover i {
