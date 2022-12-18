@@ -12,9 +12,9 @@ function hoverChanges(index) {
 	} else {
 		textArea[index].style.width = '100%';
 		for(i = 0; i < diamonds.length; i++){
-			diamonds[i].style.backgroundColor = '#3d4840';
+			diamonds[i].style.backgroundColor = 'var(--dark-pink)';
 		}
-		diamonds[index].style.backgroundColor = 'var(--asparagus)';
+		diamonds[index].style.backgroundColor = 'var(--light-pink)';
 		textArea[index].style.opacity = '0.7';
 	}
 }
@@ -45,7 +45,7 @@ diamonds.forEach((diamond, index) =>  {
     });
     diamond.addEventListener('mouseout', () => {
         for(i = 0; i < diamonds.length; i++){
-            diamonds[i].style.backgroundColor = 'var(--ash-gray)';
+            diamonds[i].style.backgroundColor = 'var(--pink)';
         }
         textArea[index].style.width = '0%';
         textArea[index].style.opacity = '0';

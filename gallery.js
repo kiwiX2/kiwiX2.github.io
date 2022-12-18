@@ -10,6 +10,7 @@ setTimeout(function() {
     	homeButton.style.opacity = '1';
 }, 2000);
 
+
 /*-------------------- AUTO SCROLL --------------------*/
 function autoScroll() {
 	gridItems.forEach((item) => {
