@@ -7,7 +7,7 @@ body {
 .grid-container {
 	overflow: hidden;
 	display: grid;
-	grid-template: repeat(10, 1fr) / repeat(16, 1fr);
+	grid-template: repeat(10, 1fr) / repeat(20, 1fr);
 	gap: 2vw;
 	height: 100vh;
 	width: 100vw;
@@ -28,27 +28,48 @@ body {
 
 
 /*-------------------- GRID ELEMENTS --------------------*/
+#home-button, #scroll-button {
+	z-index: 1;
+	opacity: 0;
+	position: relative;
+	top: 50%;
+	border-radius: 50%;
+	background-color: hotpink;
+	font-size: 30px;
+	transition: opacity linear 0.5s;
+}
+
+#home-button {
+	grid-area: 1 / 20;
+	padding: 11px;
+}
+
+#scroll-button {
+	grid-area: 9 / 10;
+	padding: 15px 13px 15% 13px;
+}
+
 #one {
-	grid-area: 1 / 1 / span 2 / span 4;
+	grid-area: 1 / 1 / span 2 / span 5;
 	background-image: url('../images/dove.png');
 }
 
 #two {
-	grid-area: 5 / 3 / span 2 / span 3;
+	grid-area: 5 / 5 / span 2 / span 4;
 	background-image: url('../images/duck.png');
 }
 
 #three {
-	grid-area: 3 / 13 / span 2 / span 4;
+	grid-area: 3 / 17 / span 2 / span 5;
 	background-image: url('../images/whiteDove.png');
 }
 
 #four {
-	grid-area: 2 / 12 / span 2 / span 2;
+	grid-area: 2 / 15 / span 2 / span 3;
 	background-image: url('../images/duck2.png');
 }
 
 #five {
-	grid-area: 2 / 7 / span 2 / span 4;
+	grid-area: 2 / 9 / span 2 / span 5;
 	background-image: url('../images/train.png');
 }
