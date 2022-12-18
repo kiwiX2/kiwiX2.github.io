@@ -1,8 +1,3 @@
-:root {
-	--diamond-size: max(40px, 6vw);
-}
-
-
 /*-------------------- MENU ICONS --------------------*/
 #slide-out, #container {
 	display: flex;
@@ -20,8 +15,8 @@
 .diamond {
 	transition: opacity 0.2s, background-color 0.2s, transform cubic-bezier(.5, 0, 0.6, 2) 0.2s;
 	transform: rotate(45deg);
-	height: var(--diamond-size);
-	width: var(--diamond-size);
+	height: max(40px, 6vw);
+	width: max(40px, 6vw);
 	outline: 10px solid black;
 	background-color: var(--ash-gray);
 }

@@ -4,6 +4,7 @@ runs = 0;
 linkArray = ["gallery.html", "gallery.html", "gallery.html"]
 
 
+/*-------------------- CHANGES TO LINK ELEMENTS --------------------*/
 function hoverChanges(index) {
 	runs++;
 	if (isPhone && textArea[index].style.width == '100%' && runs % 2 != 0) {
@@ -18,6 +19,7 @@ function hoverChanges(index) {
 	}
 }
 
+/*-------------------- PHONE COMPATIBILITY --------------------*/
 function isPhone() {
 	if(screen.width	<= 600) {
 		return true;
@@ -32,6 +34,8 @@ if (isPhone()) {
 	}
 }
 
+
+/*-------------------- FUNCTION CALL --------------------*/
 diamonds.forEach((diamond, index) =>  {
     diamond.addEventListener('touchstart', () => {
 		hoverChanges(index);

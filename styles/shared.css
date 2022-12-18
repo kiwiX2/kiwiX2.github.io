@@ -3,6 +3,7 @@
 :root {
 	--ash-gray: #b2beb5;
 	--asparagus: #87a96b;
+	--background-color: #010d14;
 }
 
 * {
@@ -16,5 +17,5 @@
 }
 
 body {
-	background-color: #010d14;
+	background-color: var(--background-color);
 }
