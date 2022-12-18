@@ -2,6 +2,8 @@ gridItems = document.querySelectorAll('.grid-item');
 scrollButton = document.getElementById('scroll-button');
 homeButton = document.getElementById('home-button');
 
+
+/*-------------------- BUTTONS FADE-IN --------------------*/
 setTimeout(function() {
     	scrollButton.style.opacity = '1';
     	homeButton.style.opacity = '1';

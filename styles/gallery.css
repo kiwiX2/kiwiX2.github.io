@@ -49,8 +49,16 @@ body {
 	padding: 15px 13px 15% 13px;
 }
 
-a:hover + i {
-	scale: 1.1;
+i {
+	transition: scale linear 0.2s;
+}
+
+a:hover i {
+	scale: 1.2;
+}
+
+a:not(:hover) i {
+	scale: 1;
 }
 
 #one {
