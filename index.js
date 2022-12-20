@@ -21,7 +21,7 @@ function hoverChanges(index) {
 
 /*-------------------- PHONE COMPATIBILITY --------------------*/
 function isPhone() {
-	if(navigator.userAgentData.mobile) {
+	if(navigator.userAgentData.mobile || (window.matchMedia("(max-width: 767px) and (max-height: 767px)").matches)) {
 		return true;
 	} else {
 		return false;
