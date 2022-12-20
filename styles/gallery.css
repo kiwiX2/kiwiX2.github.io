@@ -68,25 +68,25 @@ a:not(:hover) i {
 
 #one {
 	grid-area: 1 / 1 / span 2 / span 5;
-	background-image: url('../images/dove.png');
+	background-image: url('../images/dove.webp');
 }
 
 #two {
 	grid-area: 5 / 5 / span 2 / span 4;
-	background-image: url('../images/duck.png');
+	background-image: url('../images/duck.webp');
 }
 
 #three {
 	grid-area: 3 / 17 / span 2 / span 5;
-	background-image: url('../images/whiteDove.png');
+	background-image: url('../images/whiteDove.webp');
 }
 
 #four {
 	grid-area: 2 / 15 / span 2 / span 3;
-	background-image: url('../images/duck2.png');
+	background-image: url('../images/duck2.webp');
 }
 
 #five {
 	grid-area: 2 / 9 / span 2 / span 5;
-	background-image: url('../images/train.png');
+	background-image: url('../images/train.webp');
 }

@@ -21,7 +21,7 @@ function hoverChanges(index) {
 
 /*-------------------- PHONE COMPATIBILITY --------------------*/
 function isPhone() {
-	if(screen.width	<= 600) {
+	if(navigator.userAgentData.mobile) {
 		return true;
 	} else {
 		return false;

@@ -8,15 +8,15 @@
 
 #container {
 	width: 13vw;
-	margin: 15vh 2vh;
+	margin: 15vh 2vw;
 	align-items: center;
 }
 
 .diamond {
 	transition: opacity 0.2s, background-color 0.2s, transform cubic-bezier(.5, 0, 0.6, 2) 0.2s;
 	transform: rotate(45deg);
-	height: max(40px, 6vw);
-	width: max(40px, 6vw);
+	height: max(40px, 12vh);
+	width: max(40px, 12vh);
 	outline: 10px solid black;
 	background-color: var(--pink);
 }
@@ -28,8 +28,8 @@
 #slide-out {
 	z-index: -1;
 	position: absolute;
-	left: max(50px, 10vw);
-	width: max(200px, 20vw);
+	left: max(30px, 10vw);
+	width: max(200px, 25vw);
 }
 
 .text-slider {
@@ -38,7 +38,7 @@
 	overflow: hidden;
 	width: 0%;
 	transition: opacity 0.3s, width 0.3s;
-	font-size: 3em;
+	font-size: 4em;
 	text-align: end;
 	padding: 8%;
 	background-color: var(--light-pink);
@@ -63,12 +63,52 @@
 }
 
 
-/*-------------------- PHONE CHANGES --------------------*/
-@media only screen and (max-width: 600px) {
+/*-------------------- MEDIA QUERIES --------------------*/
+@media only screen and (max-width: 1500px) {
+	.text-slider {
+		font-size: 3em;
+	}
+}
+
+@media only screen and (max-width: 1150px) {
+	#slide-out {
+		left: 10vw;
+		width: 30vw;
+	}
+	.text-slider {
+		height: 15vh;
+		padding: 3vh;
+	}
+}
+
+@media only screen and (max-width: 600px) and (orientation: portrait) {
 	.side-img{
 		transform: scaleX(0.5) translateX(50%);
 	}
 	.text-slider {
-		font-size: 2em;
+		font-size: 1.5em;
+		left: 2vw;
+		height: 8vh;
+	}
+	#container {
+		margin: 15vh 8vw;
+	}
+	.diamond {
+		height: 12vw;
+		width: 12vw;
+	}
+	#slide-out {
+		left: 10vw;
+		width: 50vw;
 	}
 }
+
+@media only screen and (max-height: 600px) and (max-width: 1000px) and (orientation: landscape) {
+	#slide-out {
+		left: 10vw;
+		width: 30vw;
+	}
+	.text-slider {
+		padding-bottom: 20%;
+	}
+} 
