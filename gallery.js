@@ -24,12 +24,12 @@ scrollValue = 300;
 window.addEventListener('wheel', (event) => {
 	if(event.deltaY < 0 && scrollValue <= 350) {
 		reverseAnimateButton();
-	} else if(event.deltaY > 0 && scrollValue >= 450) {
+	} else if(event.deltaY > 0 && scrollValue == 450) {
 		animateButton();
 	}
-	scrollValue = Math.max(300, Math.min(480, scrollValue + event.deltaY / 2));
+	scrollValue = Math.max(300, Math.min(450, scrollValue + event.deltaY / 2));
 	gridItems.forEach((item) => {
-		item.style.transform = 'translateY(' + (300 - scrollValue) + '%)';
+		item.style.transform = 'translateY(' + (300 - scrollValue) + 'vh)';
 	})
 })
 
@@ -40,8 +40,8 @@ scrollButton.addEventListener('click', scrollButtonAnimate);
 
 function buttonScroll() {
 	gridItems.forEach((item) => {
-		item.style.transform = 'translateY(-180%)';
-		scrollValue = 480;
+		item.style.transform = 'translateY(-110vh)';
+		scrollValue = 450;
 	})
 }
 
