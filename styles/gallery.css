@@ -1,5 +1,40 @@
-body {
-	overflow: hidden;
+/*-------------------- BUTTONS --------------------*/
+#home-button, #scroll-button {
+	z-index: 2;
+	opacity: 0;
+	height: 4vw;
+	width: 4vw;
+	border-radius: 50%;
+	background-color: hotpink;
+	font-size: 25px;
+	transition: opacity linear 0.5s, transform cubic-bezier(.09, .07, .44, 1) 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+}
+
+#home-button {
+	top: 2vh;
+	right: 2vh;
+}
+
+#scroll-button {
+	top: 90vh;
+	right: calc(50vw - 3vh);
+	cursor: pointer;
+}
+
+i {
+	transition: all ease-in-out 0.2s;
+}
+
+a:hover i, #scroll-button:hover i {
+	scale: 1.2;
+}
+
+a:not(:hover) i {
+	scale: 1;
 }
 
 
@@ -23,47 +58,10 @@ body {
 }
 
 
-
 /*-------------------- GRID ELEMENTS --------------------*/
 .grid-item:hover {
 	background-size: 105%;
 	box-shadow: 5px 5px 20px black;
-}
-
-#home-button, #scroll-button {
-	z-index: 1;
-	opacity: 0;
-	position: relative;
-	top: 50%;
-	border-radius: 50%;
-	background-color: hotpink;
-	font-size: 25px;
-	transition: opacity linear 0.5s, transform cubic-bezier(.09, .07, .44, 1) 0.5s;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-#home-button {
-	grid-area: 1 / 20;
-}
-
-#scroll-button {
-	cursor: pointer;
-	grid-area: 9 / 10;
-	
-}
-
-i {
-	transition: all ease-in-out 0.2s;
-}
-
-a:hover i, #scroll-button:hover i {
-	scale: 1.2;
-}
-
-a:not(:hover) i {
-	scale: 1;
 }
 
 #one {
@@ -89,4 +87,33 @@ a:not(:hover) i {
 #five {
 	grid-area: 2 / 9 / span 2 / span 5;
 	background-image: url('../images/train.webp');
+}
+
+
+/*-------------------- MEDIA QUERIES --------------------*/
+@media (orientation: portrait) {
+	#one {
+		grid-area: 1 / 1 / span 2 / span 13;
+		background-image: url('../images/dove.webp');
+	}
+
+	#two {
+		grid-area: 2 / 11 / span 2 / span 9;
+		background-image: url('../images/duck.webp');
+	}
+
+	#three {
+		z-index: 1;
+		grid-area: 5 / 11 / span 2 / span 10;
+		background-image: url('../images/whiteDove.webp');
+	}
+
+	#four {
+		grid-area: 7 / 2 / span 2 / span 8;
+		background-image: url('../images/duck2.webp');
+	}
+
+	#five {
+		visibility: hidden;
+	}
 }

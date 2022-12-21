@@ -63,9 +63,9 @@ function scrollButtonAnimate() {
 
 function animateButton() {
 	scrollI.style.opacity = '0';
-	scrollButton.style.transform = 'scaleX(0.5) translateY(-82vh)';
+	scrollButton.style.transform = 'scaleX(0.5) translateY(-88vh)';
 	setTimeout(function() {
-		scrollButton.style.transform = 'scaleX(1) translateY(-82vh)';
+		scrollButton.style.transform = 'scaleX(1) translateY(-88vh)';
 		scrollI.style.opacity = '1';
 		scrollI.style.rotate = '180deg';
 	}, 200);
