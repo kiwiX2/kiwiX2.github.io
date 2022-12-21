@@ -21,12 +21,15 @@ function hoverChanges(index) {
 
 /*-------------------- PHONE COMPATIBILITY --------------------*/
 function isPhone() {
-	if(navigator.userAgentData.mobile || ( window.matchMedia("(max-width: 1000px) and (max-height: 1000px)").matches)) {
-		return true;
-	} else {
-		return false;
-	}
+  if (navigator.userAgentData.mobile) {
+    return true;
+  } else if (window.matchMedia("(max-width: 1000px) and (max-height: 1000px)").matches) {
+    return true;
+  } else {
+    return false;
+  }
 }
+
 
 if (isPhone()) {
 	for(i = 0; i < diamonds.length; i++) {
