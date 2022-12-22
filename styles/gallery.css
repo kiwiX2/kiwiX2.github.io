@@ -94,6 +94,26 @@ a:not(:hover) i {
 }
 
 
+/*-------------------- SLIDE IMAGES --------------------*/
+#slide-container {
+	z-index: 5;
+	display: flex;
+	justify-content: space-around;
+	position: fixed;
+	top: 15vh;
+	left: 0vw;
+	height: 70vh;
+	width: 100vw;
+	transform: translateY(100vh);
+	transition: transform cubic-bezier(.09, .07, .44, 1) 0.5s;
+}
+
+.slide-in {
+	object-fit: contain;
+	width: calc(100% / 3);
+}
+
+
 /*-------------------- MEDIA QUERIES --------------------*/
 @media (orientation: portrait) {
 	#one {

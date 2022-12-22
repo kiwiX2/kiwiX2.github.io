@@ -1,4 +1,5 @@
 gridItems = document.querySelectorAll('.grid-item');
+slideContainer = document.getElementById('slide-container');
 scrollI = document.getElementById('scroll-I');
 scrollButton = document.getElementById('scroll-button');
 homeButton = document.getElementById('home-button');
@@ -23,9 +24,9 @@ function autoScroll() {
 scrollValue = 300;
 window.addEventListener('wheel', (event) => {
 	if(event.deltaY < 0 && scrollValue <= 350) {
-		reverseAnimateButton();
+		animateButton(passThrough = 0);
 	} else if(event.deltaY > 0 && scrollValue == 450) {
-		animateButton();
+		animateButton(passThrough = 1);
 	}
 	scrollValue = Math.max(300, Math.min(450, scrollValue + event.deltaY / 2));
 	gridItems.forEach((item) => {
@@ -54,29 +55,31 @@ function reverseButtonScroll() {
 
 function scrollButtonAnimate() {
 	if (scrollI.style.rotate == '' || scrollI.style.rotate == '0deg') {
-		animateButton();
+		animateButton(passThrough = 1);
 	} else {
 		reverseButtonScroll();
-		reverseAnimateButton();
+		animateButton(passThrough = 0);
 	}
 }
 
-function animateButton() {
+function animateButton(passThrough) {
 	scrollI.style.opacity = '0';
-	scrollButton.style.transform = 'scaleX(0.5) translateY(-88vh)';
+	scrollButton.style.transform = 'scaleX(0.5) translateY(' + (-88 * passThrough) + 'vh)';
 	setTimeout(function() {
-		scrollButton.style.transform = 'scaleX(1) translateY(-88vh)';
+		scrollButton.style.transform = 'scaleX(1) translateY(' + (-88 * passThrough) + 'vh)';
 		scrollI.style.opacity = '1';
-		scrollI.style.rotate = '180deg';
+		scrollI.style.rotate = (180 * passThrough) + 'deg';
 	}, 200);
+	if(passThrough == 1) {
+		slideIn(slideDir = 0);
+	}
+	if(passThrough == 0) {
+		slideIn(slideDir = 1);
+	}
 } 
 
-function reverseAnimateButton() {
-	scrollI.style.opacity = '0';
-	scrollButton.style.transform = 'scaleX(0.5) translateY(0%)';
+function slideIn() {
 	setTimeout(function() {
-		scrollButton.style.transform = 'scaleX(1) translateY(0%)';
-		scrollI.style.opacity = '1';
-		scrollI.style.rotate = '0deg';
-	}, 200);
+		slideContainer.style.transform = 'translateY(' + (100 * slideDir) + 'vh)';
+	}, 850 * passThrough);
 }
