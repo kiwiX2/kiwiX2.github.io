@@ -113,6 +113,14 @@ a:not(:hover) i {
 	width: calc(100% / 3);
 }
 
+#slide-container > p {
+	position: fixed;
+	width: 50%;
+	text-align: center;
+	color: white;
+	font-size: 5rem;
+}
+
 
 /*-------------------- MEDIA QUERIES --------------------*/
 @media (orientation: portrait) {
