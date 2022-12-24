@@ -21,7 +21,7 @@
 
 #scroll-button {
 	top: 90vh;
-	right: calc(50vw - 3vh);
+	right: calc(50vw - 2vw);
 	cursor: pointer;
 }
 
@@ -147,5 +147,9 @@ a:not(:hover) i {
 		font-size: 130%;
 		height: 4vh;
 		width: 4vh;
+	}
+
+	#scroll-button {
+		right: calc(50vw - 2vh);
 	}
 }
