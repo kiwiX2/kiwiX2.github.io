@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 32px;
+  color: white;
+  text-decoration: none;
+  font-family: "Share Tech Mono", monospace;
+}
+
+body {
+  background-color: #3c3a4c;
+}
+
+#toolMenu {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 350px;
+  background-color: #7e7c7d;
+}
+
+#mapIcon {
+  margin: 1vh;
+  display: flex;
+  justify-content: center;
+  width: calc(100% - 10vh - 3vh);
+  height: 10vh;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+#mapImg {
+  width: 100%;
+  height: 100%;
+  background-size: 1280px, 720px;
+  background-position: 50%, 50%;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+
+#mapTitle {
+  position: absolute;
+  top: 0;
+  line-height: 11vh;
+  text-shadow: 1px 1px #3c3a4c, 1px -1px #3c3a4c, -1px 1px #3c3a4c, -1px -1px #3c3a4c;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+#switchSide {
+  position: relative;
+  left: calc(350px - 10vh - 1vh);
+  top: -11vh;
+  width: 10vh;
+  height: 10vh;
+  border-radius: 1rem;
+  background-color: #3c3a4c;
+}
+
+#mapCont {
+  position: absolute;
+  top: 12.5vh;
+  left: calc((100vw - 75vh) / 2);
+}

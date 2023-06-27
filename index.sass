@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap')
+
+$red: #f94555 
+$paleRed: #f2636b
+$darkRed: #672e37
+$gray: #7e7c7d
+$purplish: #3c3a4c
+
+$gridRepeat: 3
+$mapButtonGap: 3vw
+
+* 
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+	font-size: 32px
+	color: white
+	text-decoration: none
+	font-family: 'Share Tech Mono', monospace
+
+body 
+	background-color: $gray
+
+#mapContCont
+	height: calc(100vh - $mapButtonGap * 2)
+	margin: $mapButtonGap
+	display: grid
+	grid-template: repeat($gridRepeat, 1fr) / repeat($gridRepeat, 1fr)
+	gap: $mapButtonGap
+
+
+.mapCont
+	cursor: pointer
+	display: flex
+	justify-content: center
+	border-radius: 0.5rem
+	background-color: $purplish
+
+.mapCont p 
+	z-index: 1
+	position: absolute
+	line-height: calc((100vh - $mapButtonGap * 4) / $gridRepeat)
+	font-size: 1.5rem
+	text-shadow: 1px 1px $purplish, 1px -1px $purplish, -1px 1px $purplish, -1px -1px $purplish
+	text-transform: uppercase
+	pointer-events: none
+
+.mapImg
+	aspect-ratio: 1/1
+	height: calc((100vh - $mapButtonGap * 4) / $gridRepeat)
+	background-size: contain !important
+	background-repeat: no-repeat !important

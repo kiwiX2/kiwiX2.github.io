@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap')
+
+$red: #f94555 
+$paleRed: #f2636b
+$darkRed: #672e37
+$gray: #7e7c7d
+$purplish: #3c3a4c
+
+$menuWidth: 350px
+$menuMargin: 1vh
+$switchSideBtn: 10vh
+$mapIconHeight: 10vh
+$borderRadius: 1rem
+
+* 
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+
+	font-size: 32px
+	color: white
+	text-decoration: none
+	font-family: 'Share Tech Mono', monospace
+
+body 
+	background-color: $purplish
+
+
+#toolMenu
+	position: absolute
+	top: 0
+	height: 100vh
+	width: $menuWidth
+	background-color: $gray
+
+#mapIcon
+	margin: $menuMargin
+	display: flex
+	justify-content: center
+	width: calc(100% - $switchSideBtn - $menuMargin * 3)
+	height: $mapIconHeight
+	border-radius: $borderRadius
+	overflow: hidden
+
+#mapImg
+	width: 100%
+	height: 100%
+	background-size: calc(1920px / 1.5), calc(1080px / 1.5)
+	background-position: 50%, 50%
+	filter: blur(2px)
+	-webkit-filter: blur(2px)
+
+#mapTitle
+	position: absolute
+	top: 0
+	line-height: calc($mapIconHeight + $menuMargin)
+	text-shadow: 1px 1px $purplish, 1px -1px $purplish, -1px 1px $purplish, -1px -1px $purplish
+	text-transform: uppercase
+	pointer-events: none
+
+#switchSide
+	position: relative
+	left: calc($menuWidth - $switchSideBtn - $menuMargin)
+	top: calc(($mapIconHeight + $menuMargin) * -1)
+	width: $switchSideBtn
+	height: $switchSideBtn
+	border-radius: $borderRadius
+	background-color: $purplish
+
+
+
+#mapCont
+	position: absolute
+	top: 12.5vh
+	left: calc((100vw - 75vh) / 2)
