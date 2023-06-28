@@ -51,12 +51,19 @@ body {
 
 #switchSide {
   position: relative;
+  display: flex;
+  justify-content: center;
   left: calc(350px - 10vh - 1vh);
   top: -11vh;
   width: 10vh;
   height: 10vh;
   border-radius: 1rem;
   background-color: #3c3a4c;
+  cursor: pointer;
+}
+#switchSide i {
+  font-size: 1.5rem;
+  line-height: 10vh;
 }
 
 #mapCont {

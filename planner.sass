@@ -60,14 +60,19 @@ body
 
 #switchSide
 	position: relative
+	display: flex 
+	justify-content: center
 	left: calc($menuWidth - $switchSideBtn - $menuMargin)
 	top: calc(($mapIconHeight + $menuMargin) * -1)
 	width: $switchSideBtn
 	height: $switchSideBtn
 	border-radius: $borderRadius
 	background-color: $purplish
+	cursor: pointer
 
-
+	i 
+		font-size: 1.5rem
+		line-height: $mapIconHeight
 
 #mapCont
 	position: absolute
