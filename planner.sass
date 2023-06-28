@@ -31,7 +31,7 @@ body
 	top: 0
 	height: 100vh
 	width: $menuWidth
-	background-color: $gray
+	box-shadow: 3px 0 $paleRed
 
 #mapIcon
 	margin: $menuMargin
@@ -41,6 +41,7 @@ body
 	height: $mapIconHeight
 	border-radius: $borderRadius
 	overflow: hidden
+	outline: 3px solid $paleRed
 
 #mapImg
 	width: 100%
@@ -53,9 +54,10 @@ body
 #mapTitle
 	position: absolute
 	top: 0
-	line-height: calc($mapIconHeight + $menuMargin)
+	line-height: calc($mapIconHeight + $menuMargin * 2)
 	text-shadow: 1px 1px $purplish, 1px -1px $purplish, -1px 1px $purplish, -1px -1px $purplish
 	text-transform: uppercase
+	font-size: 1.5rem
 	pointer-events: none
 
 #switchSide
@@ -67,12 +69,31 @@ body
 	width: $switchSideBtn
 	height: $switchSideBtn
 	border-radius: $borderRadius
-	background-color: $purplish
+	outline: 3px solid $paleRed
 	cursor: pointer
 
 	i 
 		font-size: 1.5rem
 		line-height: $mapIconHeight
+
+#tools 
+	margin: $menuMargin
+	text-transform: uppercase
+
+#toolCont
+	display: grid
+	gap: calc($menuMargin * 4)
+	grid-template: repeat(1, 1fr) / repeat(5, 1fr)
+	margin: $menuMargin
+	width: $menuWidth
+	height: calc($menuWidth / 5)
+
+	i
+		height: 100%
+		aspect-ratio: 1/1
+		outline: 3px solid $paleRed
+		padding: calc(1rem / 2) 0 0 calc(1rem / 2)
+		cursor: pointer
 
 #mapCont
 	position: absolute
